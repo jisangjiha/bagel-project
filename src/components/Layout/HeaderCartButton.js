@@ -4,11 +4,11 @@ import classes from "./HeaderCartButton.module.css";
 const HeaderCartButton = (props) => {
   return (
     <button className={classes.button}>
-      <sapn className={classes.icon}>
+      <span className={classes.icon}>
         <CartIcon />
-      </sapn>
-      <sapn>Your Cart</sapn>
-      <sapn className={classes.badge}>3</sapn>
+      </span>
+      <span>Your Cart</span>
+      <span className={classes.badge}>3</span>
     </button>
   );
 };
