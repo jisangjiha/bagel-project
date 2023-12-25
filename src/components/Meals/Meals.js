@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 
 import MealsSummary from "./MealsSummary";
-import AvailableMeals from "./AvailableMeals";
 import MenuTab from "./MenuTab";
 
 const Meals = (props) => {
@@ -9,7 +8,6 @@ const Meals = (props) => {
     <Fragment>
       <MealsSummary />
       <MenuTab />
-      <AvailableMeals />
     </Fragment>
   );
 };
