@@ -13,3 +13,8 @@
   background-color: white;
   color: #035200;
 }
+
+.menutab h2:hover {
+  cursor: pointer;
+  color: rgb(255, 223, 184);
+}
