@@ -1,5 +1,4 @@
 .meals {
-  max-width: 60rem;
   width: 90%;
   margin: 0 3rem;
   animation: meals-appear 1s ease-out forwards;

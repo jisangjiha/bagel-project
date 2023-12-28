@@ -26,7 +26,7 @@ const MenuTab = (props) => {
 
   return (
     <section>
-      <div className={classes.menutab}>
+      <div className={classes.tab}>
         <h2 onClick={handleBagels}>Bagels</h2>
         <h2 onClick={handleCreamcheese}>Cream Cheese & Spreads</h2>
         <h2 onClick={handleBeverages}>Beverages</h2>
