@@ -6,9 +6,9 @@
 - Summary
 - How to use this App
   
-## Summary
-- 기간 : 
-- 개발 스택 : React, JavaScript, Html, CSS
+## Stack
+- Language : JavaScript, Html, CSS
+- Library/Framework : React
 
 ## How to use this APP
 먼저 베이글을 선택하고, 크림치즈/스프레드를 선택합니다.
