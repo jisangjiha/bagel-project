@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 
 import CartIcon from "../Cart/CartIcon";
 import CartContext from "../../store/cart-context";
-import classes from "./HeaderCartButton.module.css";
 
 const HeaderCartButton = (props) => {
   const [btnIsHighlighted, setBtnIsHighlighted] = useState(false);
@@ -13,10 +12,6 @@ const HeaderCartButton = (props) => {
   const numberOfCartItems = items.reduce((curNumber, item) => {
     return curNumber + item.amount;
   }, 0);
-
-  const btnClasses = `${classes.button} ${
-    btnIsHighlighted ? classes.bump : ""
-  }`;
 
   useEffect(() => {
     if (items.length === 0) {
@@ -34,12 +29,19 @@ const HeaderCartButton = (props) => {
   }, [items]);
 
   return (
-    <button className={btnClasses} onClick={props.onClick}>
-      <span className={classes.icon}>
+    <button
+      className={`cursor-pointer border-none bg-bagel-dark-green text-bagel-cream px-8 py-2 flex justify-around items-center rounded-[25px] font-bold hover:bg-bagel-darker-green active:bg-bagel-darker-green ${
+        btnIsHighlighted ? "animate-bump" : ""
+      }`}
+      onClick={props.onClick}
+    >
+      <span className="w-[1rem] h-[1rem] ">
         <CartIcon />
       </span>
-      <span>Your Cart</span>
-      <span className={classes.badge}>{numberOfCartItems}</span>
+      <span className="mx-2">Your Cart</span>
+      <span className="bg-bagel-medium-green px-3 py-0 rounded-[25px] font-bold hover:bg-bagel-green">
+        {numberOfCartItems}
+      </span>
     </button>
   );
 };

@@ -1,15 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+@layer base {
+  :root {
+    --bagel-cream: rgb(255, 223, 184);
+    --bagel-green: #035200;
+    --bagel-medium-green: #046d00;
+    --bagel-dark-green: #012900;
+    --bagel-darker-green: #001700;
+    --bagel-dark-red: #ad5502;
+    --bagle-gray: #383838;
+    --bagel-light-gray: #f3f3f3;
+  }
+
+  html {
+    @apply font-noto;
+  }
+
+  body {
+    @apply m-0 bg-neutral-600;
+  }
 }
-
-html {
-  font-family: 'Noto Sans JP', sans-serif;
-}
-
-body {
-  margin: 0;
-  background-color: #3f3f3f;
-}
-

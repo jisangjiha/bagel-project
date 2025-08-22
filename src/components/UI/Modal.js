@@ -1,16 +1,19 @@
 import { Fragment } from "react";
 import ReactDOM from "react-dom";
 
-import classes from "./Modal.module.css";
-
 const Backdrop = (props) => {
-  return <div className={classes.backdrop} onClick={props.onClose} />;
+  return (
+    <div
+      className="fixed top-0 left-0 w-full h-full z-20 bg-black/75"
+      onClick={props.onClose}
+    />
+  );
 };
 
 const ModalOverlay = (props) => {
   return (
-    <div className={classes.modal}>
-      <div className={classes.content}>{props.children}</div>
+    <div className="fixed top-[20vh] left-[5%] w-[90%] bg-white p-4 rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.25)] z-30 animate-slide-down md:w-[40rem] md:left-[calc(50%-20rem)]">
+      <div>{props.children}</div>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
-import classes from "./AvailableBagels.module.css";
 
 const DUMMY_CREAMCHEESE = [
   {
@@ -55,9 +54,9 @@ const AvailableCreamcheese = (props) => {
   ));
 
   return (
-    <section className={classes.meals}>
+    <section className="w-[90%] mx-12 animate-meals-appear">
       <Card>
-        <ul>{CreamcheeseList}</ul>
+        <ul className="list-none m-0 p-0">{CreamcheeseList}</ul>
       </Card>
     </section>
   );

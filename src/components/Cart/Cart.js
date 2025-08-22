@@ -2,7 +2,6 @@ import { useContext } from "react";
 
 import Modal from "../UI/Modal";
 import CartItem from "./CartItem";
-import classes from "./Cart.module.css";
 import CartContext from "../../store/cart-context";
 
 const Cart = (props) => {
@@ -20,7 +19,7 @@ const Cart = (props) => {
   };
 
   const cartItems = (
-    <ul className={classes["cart-items"]}>
+    <ul className="list-none m-0 p-0 max-h-80 overflow-scroll">
       {cartCtx.items.map((item) => (
         <CartItem
           key={item.id}
@@ -37,15 +36,22 @@ const Cart = (props) => {
   return (
     <Modal onClose={props.onClose}>
       {cartItems}
-      <div className={classes.total}>
+      <div className="flex justify-between items-center font-bold text-2xl my-4">
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
-      <div className={classes.actions}>
-        <button className={classes["button--alt"]} onClick={props.onClose}>
+      <div className="flex justify-end">
+        <button
+          className="cursor-pointer bg-transparent border border-bagel-darker-green px-8 py-2 rounded-[25px] ml-4 text-bagel-darker-green hover:bg-bagel-green hover:border-bagel-green hover:text-bagel-cream"
+          onClick={props.onClose}
+        >
           Close
         </button>
-        {hasItems && <button className={classes.button}>Order</button>}
+        {hasItems && (
+          <button className="cursor-pointer bg-bagel-darker-green text-bagel-cream border border-bagel-darker-green px-8 py-2 rounded-[25px] ml-4 hover:bg-bagel-green hover:border-bagel-green hover:text-bagel-cream">
+            Order
+          </button>
+        )}
       </div>
     </Modal>
   );
