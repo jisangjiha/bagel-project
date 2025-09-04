@@ -35,11 +35,11 @@ const HeaderCartButton = (props) => {
       }`}
       onClick={props.onClick}
     >
-      <span className="w-[1rem] h-[1rem] ">
+      <span className="w-[1rem] h-[1rem] mt-1">
         <CartIcon />
       </span>
-      <span className="mx-2">Your Cart</span>
-      <span className="bg-bagel-brown-md px-3 py-0 rounded-[25px] font-bold hover:bg-bagel-brown-md">
+      <span className="ml-2 mr-6">Your Cart</span>
+      <span className="border border-bagel-brown-md px-3 py-0 rounded-[25px] font-bold hover:bg-bagel-brown-md">
         {numberOfCartItems}
       </span>
     </button>

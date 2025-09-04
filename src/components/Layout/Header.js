@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 
 import HeaderCartButton from "./HeaderCartButton";
-import mealsImage from "../../assets/bagels.jpg";
 
 const Header = (props) => {
   return (
@@ -10,13 +9,6 @@ const Header = (props) => {
         <h1 className="text-3xl font-bold">Ess-a-Bagel</h1>
         <HeaderCartButton onClick={props.onShowCart} />
       </header>
-      <div className="w-full h-[25rem] z-0 overflow-hidden">
-        <img
-          src={mealsImage}
-          alt="Bagels"
-          className="w-[110%] h-full object-cover -rotate-[5deg] -translate-y-16 -translate-x-4"
-        />
-      </div>
     </Fragment>
   );
 };

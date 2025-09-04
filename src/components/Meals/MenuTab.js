@@ -25,7 +25,7 @@ const MenuTab = (props) => {
 
   return (
     <section>
-      <div className="flex justify-start flex-basis-20% mt-2 mx-4">
+      <div className="flex justify-start flex-basis-20% mt-10 mx-4">
         <h2
           onClick={handleBagels}
           className="p-4 m-0 rounded-t-xl bg-white text-bagel-brown-md-dark shadow-[0_2px_8px_rgba(0,0,0,0.25)] hover:cursor-pointer hover:text-bagel-brown-dark"

@@ -20,7 +20,7 @@ const MealItem = (props) => {
   return (
     <li className="flex justify-between m-4 pb-4 border-b border-gray-300">
       <div>
-        <h3 className="mb-1">{props.name}</h3>
+        <h3 className="mb-1 font-bold">{props.name}</h3>
         <div className="italic">{props.description}</div>
         <div className="font-bold text-bagel-brown-md text-2xl mt-2">
           {price}
