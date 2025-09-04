@@ -22,7 +22,7 @@ const MealItem = (props) => {
       <div>
         <h3 className="mb-1">{props.name}</h3>
         <div className="italic">{props.description}</div>
-        <div className="font-bold text-bagel-dark-red text-2xl mt-2">
+        <div className="font-bold text-bagel-brown-md text-2xl mt-2">
           {price}
         </div>
       </div>

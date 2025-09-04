@@ -42,13 +42,13 @@ const Cart = (props) => {
       </div>
       <div className="flex justify-end">
         <button
-          className="cursor-pointer bg-transparent border border-bagel-darker-green px-8 py-2 rounded-[25px] ml-4 text-bagel-darker-green hover:bg-bagel-green hover:border-bagel-green hover:text-bagel-cream"
+          className="cursor-pointer bg-transparent border border-bagel-brown-darker px-8 py-2 rounded-[25px] ml-4 text-bagel-brown-darker hover:bg-bagel-brown-md hover:border-bagel-brown-md hover:text-bagel-brown-light"
           onClick={props.onClose}
         >
           Close
         </button>
         {hasItems && (
-          <button className="cursor-pointer bg-bagel-darker-green text-bagel-cream border border-bagel-darker-green px-8 py-2 rounded-[25px] ml-4 hover:bg-bagel-green hover:border-bagel-green hover:text-bagel-cream">
+          <button className="cursor-pointer bg-bagel-brown-darker text-bagel-brown-light border border-bagel-brown-darker px-8 py-2 rounded-[25px] ml-4 hover:bg-bagel-brown-md hover:border-bagel-brown-md hover:text-bagel-brown-light">
             Order
           </button>
         )}

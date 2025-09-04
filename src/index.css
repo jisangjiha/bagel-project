@@ -6,14 +6,13 @@
 
 @layer base {
   :root {
-    --bagel-cream: rgb(255, 223, 184);
-    --bagel-green: #035200;
-    --bagel-medium-green: #046d00;
-    --bagel-dark-green: #012900;
-    --bagel-darker-green: #001700;
-    --bagel-dark-red: #ad5502;
-    --bagle-gray: #383838;
+    --bagel-gray: #383838;
     --bagel-light-gray: #f3f3f3;
+    --bagel-brown-light: #f5f0e8;
+    --bagel-brown-md: #d4a574;
+    --bagel-brown-md-dark: #7a5125;
+    --bagel-brown-dark: #3c2415;
+    --bagel-brown-darker: #301d11;
   }
 
   html {
@@ -21,6 +20,6 @@
   }
 
   body {
-    @apply m-0 bg-neutral-600;
+    @apply m-0 bg-bagel-brown-light;
   }
 }

@@ -30,7 +30,7 @@ const HeaderCartButton = (props) => {
 
   return (
     <button
-      className={`cursor-pointer border-none bg-bagel-dark-green text-bagel-cream px-8 py-2 flex justify-around items-center rounded-[25px] font-bold hover:bg-bagel-darker-green active:bg-bagel-darker-green ${
+      className={`cursor-pointer border-none bg-bagel-brown-dark text-bagel-brown-light px-8 py-2 flex justify-around items-center rounded-[25px] font-bold hover:bg-bagel-brown-darker active:bg-bagel-brown-darker ${
         btnIsHighlighted ? "animate-bump" : ""
       }`}
       onClick={props.onClick}
@@ -39,7 +39,7 @@ const HeaderCartButton = (props) => {
         <CartIcon />
       </span>
       <span className="mx-2">Your Cart</span>
-      <span className="bg-bagel-medium-green px-3 py-0 rounded-[25px] font-bold hover:bg-bagel-green">
+      <span className="bg-bagel-brown-md px-3 py-0 rounded-[25px] font-bold hover:bg-bagel-brown-md">
         {numberOfCartItems}
       </span>
     </button>

@@ -38,7 +38,7 @@ const MealItemForm = (props) => {
           defaultValue: "1",
         }}
       />
-      <button className="cursor-pointer bg-bagel-dark-green text-bagel-cream border border-bagel-dark-green px-8 py-2 rounded-[20px] font-bold hover:bg-bagel-darker-green active:bg-bagel-darker-green">
+      <button className="cursor-pointer bg-bagel-brown-dark text-bagel-brown-light border border-bagel-brown-dark px-8 py-2 rounded-[20px] font-bold hover:bg-bagel-brown-darker active:bg-bagel-brown-darker">
         + Add
       </button>
       {!amountIsValid && <p>Please enter a valid amount (1-5).</p>}
