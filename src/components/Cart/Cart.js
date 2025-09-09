@@ -36,19 +36,19 @@ const Cart = (props) => {
   return (
     <Modal onClose={props.onClose}>
       {cartItems}
-      <div className="flex justify-between items-center font-bold text-2xl my-4">
+      <div className="flex justify-between items-center font-bold text-2xl mt-6 mb-10 cursor-default">
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-center gap-4">
         <button
-          className="cursor-pointer bg-transparent border border-bagel-brown-darker px-8 py-2 rounded-[25px] ml-4 text-bagel-brown-darker hover:bg-bagel-brown-md hover:border-bagel-brown-md hover:text-bagel-brown-light"
+          className="w-60 cursor-pointer bg-transparent border border-bagel-brown-darker px-8 py-2 rounded-[25px] text-bagel-brown-darker hover:bg-bagel-brown-md hover:border-bagel-brown-md hover:text-bagel-brown-light"
           onClick={props.onClose}
         >
-          Close
+          Continue Shopping
         </button>
         {hasItems && (
-          <button className="cursor-pointer bg-bagel-brown-darker text-bagel-brown-light border border-bagel-brown-darker px-8 py-2 rounded-[25px] ml-4 hover:bg-bagel-brown-md hover:border-bagel-brown-md hover:text-bagel-brown-light">
+          <button className="w-60 cursor-pointer bg-bagel-brown-dark text-bagel-brown-light border border-bagel-brown-dark px-8 py-2 rounded-[25px] hover:bg-bagel-brown-darker">
             Order
           </button>
         )}
