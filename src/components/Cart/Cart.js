@@ -35,24 +35,43 @@ const Cart = (props) => {
 
   return (
     <Modal onClose={props.onClose}>
-      {cartItems}
-      <div className="flex justify-between items-center font-bold text-2xl mt-6 mb-10 cursor-default">
-        <span>Total Amount</span>
-        <span>{totalAmount}</span>
-      </div>
-      <div className="flex justify-center gap-4">
-        <button
-          className="w-60 cursor-pointer bg-transparent border border-bagel-brown-darker px-8 py-2 rounded-[25px] text-bagel-brown-darker hover:bg-bagel-brown-md hover:border-bagel-brown-md hover:text-bagel-brown-light"
-          onClick={props.onClose}
-        >
-          Continue Shopping
-        </button>
-        {hasItems && (
-          <button className="w-60 cursor-pointer bg-bagel-brown-dark text-bagel-brown-light border border-bagel-brown-dark px-8 py-2 rounded-[25px] hover:bg-bagel-brown-darker">
-            Order
-          </button>
-        )}
-      </div>
+      {hasItems ? (
+        <>
+          {cartItems}
+          <div className="flex justify-between items-center font-bold text-2xl mt-6 mb-10 cursor-default">
+            <span>Total Amount</span>
+            <span>{totalAmount}</span>
+          </div>
+          <div className="flex justify-center gap-4">
+            <button
+              className="w-60 cursor-pointer bg-transparent border border-bagel-brown-darker px-8 py-2 rounded-[25px] text-bagel-brown-darker hover:bg-bagel-brown-md hover:border-bagel-brown-md hover:text-bagel-brown-light"
+              onClick={props.onClose}
+            >
+              Continue Shopping
+            </button>
+            <button className="w-60 cursor-pointer bg-bagel-brown-dark text-bagel-brown-light border border-bagel-brown-dark px-8 py-2 rounded-[25px] hover:bg-bagel-brown-darker">
+              Order
+            </button>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="flex flex-col items-center my-10 cursor-default">
+            <span className="font-bold text-2xl">Your Cart is Empty :(</span>
+            <span className="text-lg text-bagel-brown-dark mt-10">
+              Add some delicious bagels!
+            </span>
+          </div>
+          <div className="flex justify-center gap-4">
+            <button
+              className="w-60 cursor-pointer bg-transparent border border-bagel-brown-darker px-8 py-2 rounded-[25px] text-bagel-brown-darker hover:bg-bagel-brown-md hover:border-bagel-brown-md hover:text-bagel-brown-light"
+              onClick={props.onClose}
+            >
+              Continue Shopping
+            </button>
+          </div>
+        </>
+      )}
     </Modal>
   );
 };
